@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Board</title>
+
+    <!-- daisy UI and Tailwind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/1580155eab.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+
+    <style>
+      .poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="poppins bg-sky-50 p-6">
+    <section class="container mx-auto">
+      <!-- nav bar -->
+      <header
+        class="rounded-xl flex items-center justify-between p-4 bg-white shadow-sm"
+      >
+        <div class="flex items-center gap-4">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+        </div>
+
+        <div class="flex gap-5 items-center">
+          <div class="flex gap-2 items-center bg-sky-50 px-4 py-2 rounded-2xl">
+            <input type="checkbox" class="size-7" checked />
+            <p id="count-plus" class="text-2xl font-bold">23</p>
+          </div>
+          <img src="assets/theme-btn.png" alt="" />
+        </div>
+      </header>
+      <!-- main section -->
+      <main class="mx-auto grid grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl mt-5 mb-14 p-6 col-span-3">
+          <!-- first section -->
+          <section class="grid grid-cols-4 gap-6 pb-8">
+            <div class="flex gap-2 p-7 items-center rounded-xl bg-slate-50">
+              <div class="bg-white p-3 flex rounded-full">
+                <input type="checkbox" class="size-7" checked name="" id="" />
+              </div>
+              <div>
+                <p class="font-medium text-slate-600">Task Assigned</p>
+                <p id="assigned-nmbr" class="font-bold text-3xl">6</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center py-6 pl-8 pr-20 rounded-xl text-2xl gap-5 bg-gradient-to-r from-blue-700 to-indigo-300 col-span-2 cursor-pointer"
+            >
+              <img src="./assets/board.png" alt="" />
+              <h1 class="font-medium text-2xl text-white">
+                Discover Something <br />
+                New Today!
+              </h1>
+            </div>
+
+            <div class="flex gap-2 items-center bg-sky-50 p-8 rounded-xl">
+              <div class="p-3 rounded-full bg-white">
+                <img src="assets/calender.png" alt="" />
+              </div>
+              <h1 id="calender" class="text-xl font-medium">
+              </h1>
+            </div>
+          </section>
+          <hr class="border-dotted" />
+
+          <!-- main card section -->
+          <section class="grid grid-cols-3 gap-5 mt-8">
+            <!-- card 1 -->
+            <div class="bg-sky-50 rounded-2xl p-8">
+              <p class="bg-white text-lg inline px-5 py-2 rounded-lg">
+                ShopEase
+              </p>
+              <h1 id="title1" class="text-2xl font-medium py-4">Fix Mobile Button Issue</h1>
+
+              <p class="bg-white p-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </p>
+
+              <hr class="border-dotted my-3" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-slate-500">Deadline</p>
+                  <p>21 March 2025</p>
+                </div>
+                <button
+                  id="complete-btn"
+                  class="font-medium px-4 py-3 rounded-lg bg-blue-700 text-white text-base"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- card2  -->
+            <div class="bg-sky-50 rounded-2xl p-8">
+              <p class="bg-white text-lg inline px-5 py-2 rounded-lg">
+                CloudSync
+              </p>
+              <h1 id="title2" class="text-2xl font-medium py-4">Add Dark Mode</h1>
+
+              <p class="bg-white p-3">
+                Store the user's preference in localStorage, update CSS
+                variables dynamically, and apply a smooth transition
+                effect.update CSS
+              </p>
+
+              <hr class="border-dotted my-3" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-slate-500">Deadline</p>
+                  <p>21 March 2025</p>
+                </div>
+                <button
+                  id="complete-btn2"
+                  class="font-medium px-4 py-3 rounded-lg bg-blue-700 text-white text-base"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="bg-sky-50 rounded-2xl p-8">
+              <p class="bg-white text-lg inline px-5 py-2 rounded-lg">
+                SwiftPay
+              </p>
+              <h1 id="title3" class="text-2xl font-medium py-4">Optimize Home page</h1>
+
+              <p class="bg-white p-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </p>
+
+              <hr class="border-dotted my-3" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-slate-500">Deadline</p>
+                  <p>21 March 2025</p>
+                </div>
+                <button
+                  id="complete-btn3"
+                  class="font-medium px-4 py-3 rounded-lg bg-blue-700 text-white text-base"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- card4 -->
+
+            <div class="bg-sky-50 rounded-2xl p-8">
+              <p class="bg-white text-lg inline px-5 py-2 rounded-lg">Meta</p>
+              <h1 id="title4" class="text-2xl font-medium py-4">Add new emoji 🤲</h1>
+
+              <p class="bg-white p-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </p>
+
+              <hr class="border-dotted my-3" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-slate-500">Deadline</p>
+                  <p>21 March 2025</p>
+                </div>
+                <button
+                  id="complete-btn4"
+                  class="font-medium px-4 py-3 rounded-lg bg-blue-700 text-white text-base"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- card 5 -->
+            <div class="bg-sky-50 rounded-2xl p-8">
+              <p class="bg-white text-lg inline px-5 py-2 rounded-lg">
+                Google LLC
+              </p>
+              <h1 id="title5" class="text-2xl font-medium py-4">Integrate OpenAI API</h1>
+
+              <p class="bg-white p-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </p>
+
+              <hr class="border-dotted my-3" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-slate-500">Deadline</p>
+                  <p>21 March 2025</p>
+                </div>
+                <button
+                  id="complete-btn5"
+                  class="font-medium px-4 py-3 rounded-lg bg-blue-700 text-white text-base"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- card6  -->
+            <div class="bg-sky-50 rounded-2xl p-8">
+              <p class="bg-white text-lg inline px-5 py-2 rounded-lg">
+                Glassdoar
+              </p>
+              <h1 id="title6" class="text-2xl font-medium py-4">Improve Job searching</h1>
+
+              <p class="bg-white p-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </p>
+
+              <hr class="border-dotted my-3" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-slate-500">Deadline</p>
+                  <p>21 March 2025</p>
+                </div>
+                <button
+                  id="complete-btn6"
+                  class="font-medium px-4 py-3 rounded-lg bg-blue-700 text-white "
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- side bar -->
+        <section
+          class="bg-white px-8 py-4 rounded-xl mt-5 mb-14"
+        >
+          <div class="text-center pb-4">
+            <div class="flex items-center gap-4 pb-4 justify-center">
+              <img src="./assets/activity.png" alt="" />
+              <h1 class="text-xl font-medium">Activity Log</h1>
+            </div>
+            <button id="clear-history" class="px-4 py-3 rounded-lg bg-blue-700 text-white">Clear History</button>
+          </div>
+          <hr class="border-dotted" />
+          <div id="added-history">
+            <!-- history -->
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
+  <script>
+    function getConfirmationAlert() {
+      const taskAssigned = document.getElementById('assigned-nmbr');
+    const taskValue = taskAssigned.innerText;
+    const convertedTaskAssigned =parseInt(taskValue);   
+    console.log(convertedTaskAssigned,'convertedTaskAssigned');
+    
+    if (convertedTaskAssigned === 1) {
+        alert("congrats!!! You Have Completed all the current Task");
+      }
+
+    }
+    const addedHistory = document.getElementById("added-history");
+
+    const date = new Date().toDateString().replace(' ', ',<br> ');
+    document.getElementById("calender").innerHTML = date;
+
+    document
+      .getElementById("complete-btn")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        // btn 1
+
+        alert("Board updated Successfully");
+        getConfirmationAlert();
+        const button = document.getElementById("complete-btn");
+        button.disabled = true;
+        button.style.backgroundColor = "silver";
+
+        const assignedNumber =
+          document.getElementById("assigned-nmbr").innerText;
+        const convertedAssignedNumber = parseInt(assignedNumber);
+
+        const countPlus = document.getElementById("count-plus").innerText;
+        const convertedCountPlus = parseInt(countPlus);
+
+        const minusCount = convertedAssignedNumber - 1;
+        document.getElementById("assigned-nmbr").innerText = minusCount;
+        const plusCount = convertedCountPlus + 1;
+        document.getElementById("count-plus").innerText = plusCount;
+        const title = document.getElementById('title1').innerText;
+        const p = document.createElement("p");
+        const time = new Date().toLocaleTimeString();
+        p.style.cssText =
+          "font-size:16px; background-color:gainsboro; border-radius:12px; padding:20px; margin:20px 0;";
+        p.innerText = `You have completed ${title} at ${time}`;
+        addedHistory.append(p);
+      });
+
+    // btn 2
+
+    document
+      .getElementById("complete-btn2")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Board updated Successfully");
+        getConfirmationAlert()
+        const button = document.getElementById("complete-btn2");
+        button.disabled = true;
+        button.style.backgroundColor = "silver";
+
+        const assignedNumber =
+          document.getElementById("assigned-nmbr").innerText;
+        const convertedAssignedNumber = parseInt(assignedNumber);
+
+        const countPlus = document.getElementById("count-plus").innerText;
+        const convertedCountPlus = parseInt(countPlus);
+
+        const minusCount = convertedAssignedNumber - 1;
+        document.getElementById("assigned-nmbr").innerText = minusCount;
+        const plusCount = convertedCountPlus + 1;
+        document.getElementById("count-plus").innerText = plusCount;
+        const title = document.getElementById('title2').innerText;
+        const p = document.createElement("p");
+        const time = new Date().toLocaleTimeString();
+        p.style.cssText =
+          "font-size:16px; background-color:gainsboro; border-radius:12px; padding:20px; margin:20px 0;";
+        p.innerText = `You have completed ${title} at ${time}`;
+        addedHistory.append(p);
+      });
+
+    // btn 3
+
+    document
+      .getElementById("complete-btn3")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Board updated Successfully");
+        getConfirmationAlert()
+        const button = document.getElementById("complete-btn3");
+        button.disabled = true;
+        button.style.backgroundColor = "silver";
+
+        const assignedNumber =
+          document.getElementById("assigned-nmbr").innerText;
+        const convertedAssignedNumber = parseInt(assignedNumber);
+
+        const countPlus = document.getElementById("count-plus").innerText;
+        const convertedCountPlus = parseInt(countPlus);
+
+        const minusCount = convertedAssignedNumber - 1;
+        document.getElementById("assigned-nmbr").innerText = minusCount;
+        const plusCount = convertedCountPlus + 1;
+        document.getElementById("count-plus").innerText = plusCount;
+        const title = document.getElementById('title3').innerText;
+        const p = document.createElement("p");
+        const time = new Date().toLocaleTimeString();
+        p.style.cssText =
+          "font-size:16px; background-color:gainsboro; border-radius:12px; padding:20px; margin:20px 0;";
+        p.innerText = `You have completed ${title} at ${time}`;
+        addedHistory.append(p);
+      });
+
+    // btn 4
+
+    document
+      .getElementById("complete-btn4")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Board updated Successfully");
+        getConfirmationAlert()
+        const button = document.getElementById("complete-btn4");
+        button.disabled = true;
+        button.style.backgroundColor = "silver";
+
+        const assignedNumber =
+          document.getElementById("assigned-nmbr").innerText;
+        const convertedAssignedNumber = parseInt(assignedNumber);
+
+        const countPlus = document.getElementById("count-plus").innerText;
+        const convertedCountPlus = parseInt(countPlus);
+
+        const minusCount = convertedAssignedNumber - 1;
+        document.getElementById("assigned-nmbr").innerText = minusCount;
+        const plusCount = convertedCountPlus + 1;
+        document.getElementById("count-plus").innerText = plusCount;
+        const title = document.getElementById('title4').innerText;
+        const p = document.createElement("p");
+        const time = new Date().toLocaleTimeString();
+        p.style.cssText =
+          "font-size:16px; background-color:gainsboro; border-radius:12px; padding:20px; margin:20px 0;";
+        p.innerText = `You have completed ${title} at ${time}`;
+        addedHistory.append(p);
+      });
+
+    // btn 5
+
+    document
+      .getElementById("complete-btn5")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Board updated Successfully");
+        getConfirmationAlert()
+        const button = document.getElementById("complete-btn5");
+        button.disabled = true;
+        button.style.backgroundColor = "silver";
+
+        const assignedNumber =
+          document.getElementById("assigned-nmbr").innerText;
+        const convertedAssignedNumber = parseInt(assignedNumber);
+
+        const countPlus = document.getElementById("count-plus").innerText;
+        const convertedCountPlus = parseInt(countPlus);
+
+        const minusCount = convertedAssignedNumber - 1;
+        document.getElementById("assigned-nmbr").innerText = minusCount;
+        const plusCount = convertedCountPlus + 1;
+        document.getElementById("count-plus").innerText = plusCount;
+        const title = document.getElementById('title5').innerText;
+        const p = document.createElement("p");
+        const time = new Date().toLocaleTimeString();
+        p.style.cssText =
+          "font-size:16px; background-color:gainsboro; border-radius:12px; padding:20px; margin:20px 0;";
+        p.innerText = `You have completed ${title} at ${time}`;
+        addedHistory.append(p);
+      });
+    // btn 6
+
+    document
+      .getElementById("complete-btn6")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Board updated Successfully");
+        getConfirmationAlert()
+        const button = document.getElementById("complete-btn6");
+        button.disabled = true;
+        button.style.backgroundColor = "silver";
+
+        const assignedNumber =
+          document.getElementById("assigned-nmbr").innerText;
+        const convertedAssignedNumber = parseInt(assignedNumber);
+
+        const countPlus = document.getElementById("count-plus").innerText;
+        const convertedCountPlus = parseInt(countPlus);
+
+        const minusCount = convertedAssignedNumber - 1;
+        document.getElementById("assigned-nmbr").innerText = minusCount;
+        const plusCount = convertedCountPlus + 1;
+        document.getElementById("count-plus").innerText = plusCount;
+        const title = document.getElementById('title6').innerText;
+        const p = document.createElement("p");
+        const time = new Date().toLocaleTimeString();
+        p.style.cssText =
+          "font-size:16px; background-color:gainsboro; border-radius:12px; padding:20px; margin:20px 0;";
+        p.innerText = `You have completed ${title} at ${time}`;
+        addedHistory.append(p);
+      });
+
+
+    document.getElementById('clear-history').addEventListener('click',function (event) {
+      event.preventDefault();
+      addedHistory.style.display = 'none';
+    })
+
+
+  </script>
+  <script src="./scripts/script.js"></script>
+</html>
