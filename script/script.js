@@ -11,7 +11,7 @@ if (convertedTaskAssigned === 1) {
 }
 const addedHistory = document.getElementById("added-history");
 
-const date = new Date().toDateString().replace(' ', ',<br> ');
+const date = new Date().toDateString();
 document.getElementById("calender").innerHTML = date;
 
 document
