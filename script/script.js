@@ -221,3 +221,7 @@ document.getElementById('clear-history').addEventListener('click',function (even
   event.preventDefault();
   addedHistory.style.display = 'none';
 })
+
+document.getElementById('discover').addEventListener('click',function () {
+  window.location.href ='./blog.html'
+})
