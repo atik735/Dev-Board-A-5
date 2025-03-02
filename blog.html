@@ -33,51 +33,91 @@
         </div>
 
         <div>
-          <button id="backto-desk" class="px-4 py-3 rounded-lg bg-blue-700 text-white cursor-pointer">Back to Desk</button>
+          <button
+            id="backto-desk"
+            class="px-4 py-3 rounded-lg bg-blue-700 text-white cursor-pointer"
+          >
+            Back to Desk
+          </button>
         </div>
       </header>
       <main>
         <h2 class="text-center font-bold text-4xl py-8">Blogs</h2>
         <section class="space-y-6">
-        <div class="bg-white p-4 rounded-md">
-          <h1 class="text-2xl font-semibold py-3">Question-1: What are the different ways to select an element in the DOM?</h1>
-          <hr class="border-dotted">
-          <p class="text-lg text-slate-500 py-3">
-            1. document.querySelector(); <br>
-            2. document.querySelectorAll();<br>
-            3. document.getElementById();<br>
-            4. document.getElementsByClassName(); <br>
-            5. document.getElementsByTagName(); <br>
-          </p>
-        </div>
-        <div class="bg-white p-4 rounded-md">
-          <h1 class="text-2xl font-semibold py-3">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
-          <hr class="border-dotted">
-          <p class="text-lg text-slate-500 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi labore repudiandae sequi! Distinctio modi ratione natus temporibus aliquam numquam explicabo nisi ex, voluptates magnam vel tenetur autem, culpa iusto non.</p>
-        </div>
-        <div class="bg-white p-4 rounded-md">
-          <h1 class="text-2xl font-semibold py-3">Question-3: What is event delegation in the DOM?</h1>
-          <hr class="border-dotted">
-          <p class="text-lg text-slate-500 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi labore repudiandae sequi! Distinctio modi ratione natus temporibus aliquam numquam explicabo nisi ex, voluptates magnam vel tenetur autem, culpa iusto non.</p>
-        </div>
-        <div class="bg-white p-4 rounded-md">
-          <h1 class="text-2xl font-semibold py-3">Question-4: What is event bubbling in the DOM?</h1>
-          <hr class="border-dotted">
-          <p class="text-lg text-slate-500 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi labore repudiandae sequi! Distinctio modi ratione natus temporibus aliquam numquam explicabo nisi ex, voluptates magnam vel tenetur autem, culpa iusto non.</p>
-        </div>
-        <div class="bg-white p-4 rounded-md">
-          <h1 class="text-2xl font-semibold py-3">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
-          <hr class="border-dotted">
-          <p class="text-lg text-slate-500 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi labore repudiandae sequi! Distinctio modi ratione natus temporibus aliquam numquam explicabo nisi ex, voluptates magnam vel tenetur autem, culpa iusto non.</p>
-        </div>
-      </section>
+          <div class="bg-white p-4 rounded-md">
+            <h1 class="text-2xl font-semibold py-3">
+              Question-1: What are the different ways to select an element in
+              the DOM?
+            </h1>
+            <hr class="border-dotted" />
+            <p class="text-lg text-slate-500 py-3">
+              1. document.querySelector(); <br />
+              2. document.querySelectorAll();<br />
+              3. document.getElementById();<br />
+              4. document.getElementsByClassName(); <br />
+              5. document.getElementsByTagName(); <br />
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-md">
+            <h1 class="text-2xl font-semibold py-3">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent ?
+            </h1>
+            <hr class="border-dotted" />
+            <p class="text-lg text-slate-500 py-3">
+              innerHtml : can create and modify html;<br />
+              innerText :inner text diye kono tag er vitor ki lekha ache dekha
+              jai..abr sei lekha o change kora jai;<br />
+              textContent: eti innerText er kachakachi..eti raw html o
+              dekhai.hidden text o dekhate pare;
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-md">
+            <h1 class="text-2xl font-semibold py-3">
+              Question-3: What is event delegation in the DOM?
+            </h1>
+            <hr class="border-dotted" />
+            <p class="text-lg text-slate-500 py-3">
+              event delegate hosse..er vitor er list ta k click korle muche
+              jabe…abr add item korle item add hobe..abr add kora item k o click
+              korle muche jabe..
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-md">
+            <h1 class="text-2xl font-semibold py-3">
+              Question-4: What is event bubbling in the DOM?
+            </h1>
+            <hr class="border-dotted" />
+            <p class="text-lg text-slate-500 py-3">
+              Event bubbling hosse..er vitor jdi onk gula section thake..tahole
+              j section ta k click kora hoyese..sei section ta k dhorbe..tarpor
+              porer section tarpor porer section..eivabe kore bubble kore kore
+              upor a asbe..eta kothao chaile off kora jai..jar jonno
+              stopPropagation use krte hoi
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-md">
+            <h1 class="text-2xl font-semibold py-3">
+              Question-5: How do you create, add, and remove elements using
+              JavaScript?
+            </h1>
+            <hr class="border-dotted" />
+            <p class="text-lg text-slate-500 py-3">
+              1. create:document.createElement();<br />
+              2. .appendChild(),,append(),innerHtml;<br />
+              3. remove(),removeChild();
+            </p>
+          </div>
+        </section>
       </main>
     </section>
     <script>
-      document.getElementById('backto-desk').addEventListener('click',function (event) {
-        event.preventDefault();
-        window.location.href = './index.html'
-      })
+      document
+        .getElementById("backto-desk")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "./index.html";
+        });
     </script>
   </body>
 </html>

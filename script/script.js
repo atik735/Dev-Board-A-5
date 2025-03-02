@@ -9,6 +9,17 @@ if (convertedTaskAssigned === 1) {
   }
 
 }
+
+const changeBg = document.getElementById("theme-change");
+changeBg.addEventListener("click", function(){
+
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+})
+
+
 const addedHistory = document.getElementById("added-history");
 
 const date = new Date().toDateString();
